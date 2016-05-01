@@ -1,0 +1,14 @@
+{
+  "name": "stylesheet-loader",
+  "version": "0.0.1",
+  "description": "StyleSheet Loader",
+  "main": "index.js",
+  "keywords": [
+    "stylesheet"
+  ],
+  "author": "Yuanyan Cao",
+  "dependencies": {
+    "camelcase": "^2.1.1",
+    "css": "^2.2.1"
+  }
+}
