@@ -5,19 +5,21 @@ A webpack loader that imports a css file and converts it to be used as an inline
 ```css
 /* foo.css */
 .container {
-  color: red;
   background-color: blue;
+}
+
+.container .title {
+  font-size: 20px;
 }
 ```
 
 ```js
-import styles from 'stylesheet!css!./foo.css';
-// import styles from 'stylesheet!css!less!./foo.less';
+import styles from 'stylesheet!./foo.css';
+// import styles from 'stylesheet!less!./foo.less';
 function Foo() {
-  return <div style={styles.container} />;
+  return <div style={styles.container}>
+    <span style={styles.container_title></span>
+  </div>;
 }
 export default Foo;
 ```
-
-## Limitations
-Because the css is inlined, pseudo classes (`:hover`, `:active`, ...) can't be supported.  
